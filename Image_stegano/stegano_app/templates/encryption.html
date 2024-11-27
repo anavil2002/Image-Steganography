@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Encryption - Image Steganography Project</title>
+</head>
+<body>
+{% include 'navigation.html' %}
+
+<div class="container mt-5">
+    <h1 class="text-center">Encrypt Your Image</h1>
+    <form method="post" class="mt-5" action="{% url 'encryption' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Select an Image</label>
+            <input type="file" name="image" class="form-control-file" required>
+        </div>
+    <div class="form-group">
+            <label>Enter the Text:</label>
+        <textarea name="text" class="form-control" required rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% if message %}
+<p align="center">{{message}}</p>
+{% endif %}
+</body>
+</html>

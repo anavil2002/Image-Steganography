@@ -1,0 +1,57 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Steganography Project</title>
+    <style>
+        .footer{
+                text-align:center;
+                width:100%;
+                padding:15px;
+                bottom:0px;
+                position:fixed;
+        }
+        .image-container{
+        position:relative;
+        width:50%;
+        float:left;
+        text-align:center;
+        }
+
+        .button-link{
+        position:absolute;
+        top:70%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        }
+
+        .button-link1{
+        position:absolute;
+        top:20%;
+        left:49%;
+        transform:translate(-50%,-50%);
+        }
+        }
+    </style>
+</head>
+<body>
+{% include 'navigation.html' %}
+<div class="image-container mt-5">
+    <img src="{% static 'images/Encryption.png' %}", height="300px", width="500px">
+    <a href="encryption/" class="btn btn-danger button-link">ENCRYPT NOW!</a>
+</div>
+
+<div class="image-container mt-5">
+    <img src="{% static 'images/Decryption.png' %}", height="300px", width="500px">
+    <a href="decryption/" class="btn btn-danger button-link1">DECRYPT NOW!</a>
+</div>
+<footer class ="footer">
+    <p>&copy; Anavil Project </p>
+
+</footer>
+</body>
+</html>
