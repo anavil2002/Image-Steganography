@@ -87,7 +87,6 @@ python extract.py --input demo/stego.png
 
 * Add **encryption layer** before hiding messages
 * Support for more formats (BMP, TIFF, etc.)
-* Create a **GUI/Web app** for easy use
 * Batch processing multiple images
 
 ---
